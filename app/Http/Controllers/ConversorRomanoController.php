@@ -16,6 +16,10 @@ class ConversorRomanoController extends Controller
     
     public function converter(int $numero)
     {
-        dd('caiu', $numero);
+        if (!is_int($numero) || $numero < 1) {
+            throw new \InvalidArgumentException('Número inválido');
+        }
+
+        return $this->conversorRomano->converter($numero);
     }
 }
