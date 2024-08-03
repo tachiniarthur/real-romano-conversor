@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ConversorRomano;
+use Illuminate\Http\Request;
 
 class ConversorRomanoController extends Controller
 {
@@ -14,14 +15,17 @@ class ConversorRomanoController extends Controller
         $this->conversorRomano = $conversorRomano;
     }
     
-    public function converter(int $numero)
+    public function index(Request $request)
     {
-        if (!is_int($numero) || $numero < 1 || $numero > 3999) {
-            throw new \InvalidArgumentException('Número inválido');
-        }
-        
-        $valorConvertido = $this->conversorRomano->converter($numero);
+        $numero = $request->input('number');
+        $valorConvertido = null;
 
-        return response()->json(['numero romano' => $valorConvertido]);
-    }
+        if ($numero) {
+            $valorConvertido = $this->conversorRomano->identificarConversor($numero);
+        }
+
+        return view('index', [
+            'valorConvertido' => $valorConvertido ?? null,
+        ]);
+    }   
 }
