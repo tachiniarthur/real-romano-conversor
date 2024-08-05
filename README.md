@@ -1,8 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Roman Real Converter
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Roman Real Converter is a project developed to convert numbers from Roman numerals to Real numbers and vice versa. This application is built using Laravel and Vue3, providing a seamless and efficient experience for users.
+
+## Technologies Used
+
+- **Laravel**: PHP framework for backend development.
+
+## Requirements
+
+- PHP >= 8.0
+- Composer
+- Node.js >= 16.x
+- NPM or Yarn
+
+## Installation
+
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/tachiniarthur/real-romano-conversor.git
+cd real-romano-conversor
+```
+
+2. **Install Backend Dependencies**
+
+```bash
+composer install
+```
+
+3. **Configure the Environment**
+
+Copy the .env.example file to .env and set up the necessary environment variables, such as database connection.
+
+```bash
+cp .env.example .env
+```
+
+4. **Generate Application Key**
+
+```bash
+php artisan key:generate
+```
+
+5. **Install Frontend Dependencies**
+
+```bash
+npm install
+```
+
+6. **Compile Assets**
+
+```bash
+npm run dev
+```
+
+7. **Run Migrations and Seeds**
+
+```bash
+php artisan migrate --seed
+```
+
+8. **Start the Server**
+
+```bash
+php artisan serve
+```
+
+## Usage
+
+Access the application via a browser at http://localhost:8000.
